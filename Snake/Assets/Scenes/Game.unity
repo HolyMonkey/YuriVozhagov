@@ -1727,9 +1727,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 196294155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848ab5d46f1dc0541a1e067da08e1ece, type: 3}
+  m_Script: {fileID: 11500000, guid: b2681a24135776d4fa2ee69e01a425e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealValue: 1
 --- !u!4 &203356102 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4340555707901484, guid: 48ad265f338caaf4da3a864816595b22,
@@ -8473,9 +8474,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182040593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848ab5d46f1dc0541a1e067da08e1ece, type: 3}
+  m_Script: {fileID: 11500000, guid: b2681a24135776d4fa2ee69e01a425e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealValue: 1
 --- !u!1001 &1189171809
 Prefab:
   m_ObjectHideFlags: 0
@@ -11972,9 +11974,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508351344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848ab5d46f1dc0541a1e067da08e1ece, type: 3}
+  m_Script: {fileID: 11500000, guid: b2681a24135776d4fa2ee69e01a425e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealValue: 1
 --- !u!4 &1510490972 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4856522368811236, guid: b2199aadf1bb8c4449f3edfc84a39f78,
@@ -12259,9 +12262,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542536945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848ab5d46f1dc0541a1e067da08e1ece, type: 3}
+  m_Script: {fileID: 11500000, guid: b2681a24135776d4fa2ee69e01a425e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealValue: 1
 --- !u!4 &1548575497 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4856522368811236, guid: b2199aadf1bb8c4449f3edfc84a39f78,
@@ -12524,9 +12528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578319514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848ab5d46f1dc0541a1e067da08e1ece, type: 3}
+  m_Script: {fileID: 11500000, guid: b2681a24135776d4fa2ee69e01a425e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealValue: 1
 --- !u!1001 &1585322872
 Prefab:
   m_ObjectHideFlags: 0
