@@ -61,7 +61,12 @@ public class Snake : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Food")
         {
-            collision.gameObject.GetComponent<IFoodLogic>().Do(gameObject.GetComponent<Snake>());
+            var logics = collision.gameObject.GetComponents<IFoodLogic>();
+
+            foreach (var logic in logics)
+            {
+                logic.Do(gameObject.GetComponent<Snake>());
+            }
 
             Destroy(collision.gameObject);
             var bone = Instantiate(TailPrefab);
@@ -76,6 +81,11 @@ public class Snake : MonoBehaviour {
 
     void DisplayHealth()
     {
+        /*
+         * Сейчас snake связан с отображением жизни
+         * Необходимо сделать такую связь, чтобы Snake не зависил от отображения как сейчас
+         * 
+         */
         if (Health >= 0)
         {
             HealthDisplay.text ="Здоровье: " +  Health.ToString();
