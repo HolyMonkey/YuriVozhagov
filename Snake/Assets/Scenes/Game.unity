@@ -1616,6 +1616,7 @@ GameObject:
   - component: {fileID: 196294160}
   - component: {fileID: 196294161}
   - component: {fileID: 196294162}
+  - component: {fileID: 196294163}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -1731,6 +1732,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValue: 1
+--- !u!114 &196294163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 196294155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d0c12c9e9a184598dd3a63e1677ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &203356102 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4340555707901484, guid: 48ad265f338caaf4da3a864816595b22,
@@ -8363,6 +8375,7 @@ GameObject:
   - component: {fileID: 1182040598}
   - component: {fileID: 1182040599}
   - component: {fileID: 1182040600}
+  - component: {fileID: 1182040601}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -8478,6 +8491,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValue: 1
+--- !u!114 &1182040601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182040593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d0c12c9e9a184598dd3a63e1677ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1189171809
 Prefab:
   m_ObjectHideFlags: 0
@@ -9169,6 +9193,7 @@ GameObject:
   - component: {fileID: 1253462356}
   - component: {fileID: 1253462358}
   - component: {fileID: 1253462357}
+  - component: {fileID: 1253462359}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -9235,6 +9260,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253462355}
+--- !u!114 &1253462359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253462355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba26a58ff0664e46875fb4c7bb2c2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthText: {fileID: 0}
 --- !u!4 &1266441536 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4437459323509006, guid: 0de8a3d472546b04aa775e83b052764e,
@@ -9557,13 +9594,14 @@ GameObject:
   - component: {fileID: 1284713996}
   - component: {fileID: 1284713995}
   - component: {fileID: 1284713994}
+  - component: {fileID: 1284714002}
   - component: {fileID: 1284713998}
   - component: {fileID: 1284713999}
   - component: {fileID: 1284714000}
   - component: {fileID: 1284714001}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Snake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9656,10 +9694,7 @@ MonoBehaviour:
   - {fileID: 1737696793}
   Speed: 0.1
   BonesDistance: 0.5
-  HealthDisplay: {fileID: 1253462357}
   Health: 3
-  StartHungerTime: 3
-  hungerTime: 3
   TailPrefab: {fileID: 1475426811981050, guid: af41bfe86b3f7f54cbbd62ffb523c8a8, type: 2}
   OnEat:
     m_PersistentCalls:
@@ -9816,6 +9851,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1284714002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1284713993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2d6678a4049604a8fad4d9a179bd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1290051717
 Prefab:
   m_ObjectHideFlags: 0
@@ -11863,6 +11909,7 @@ GameObject:
   - component: {fileID: 1508351349}
   - component: {fileID: 1508351350}
   - component: {fileID: 1508351351}
+  - component: {fileID: 1508351352}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -11978,6 +12025,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValue: 1
+--- !u!114 &1508351352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1508351344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d0c12c9e9a184598dd3a63e1677ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1510490972 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4856522368811236, guid: b2199aadf1bb8c4449f3edfc84a39f78,
@@ -12151,6 +12209,7 @@ GameObject:
   - component: {fileID: 1542536950}
   - component: {fileID: 1542536951}
   - component: {fileID: 1542536952}
+  - component: {fileID: 1542536953}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -12266,6 +12325,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValue: 1
+--- !u!114 &1542536953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1542536945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d0c12c9e9a184598dd3a63e1677ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1548575497 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4856522368811236, guid: b2199aadf1bb8c4449f3edfc84a39f78,
@@ -12417,6 +12487,7 @@ GameObject:
   - component: {fileID: 1578319519}
   - component: {fileID: 1578319520}
   - component: {fileID: 1578319521}
+  - component: {fileID: 1578319522}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -12532,6 +12603,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealValue: 1
+--- !u!114 &1578319522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578319514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d0c12c9e9a184598dd3a63e1677ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1585322872
 Prefab:
   m_ObjectHideFlags: 0
