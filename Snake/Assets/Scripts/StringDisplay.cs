@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthDisplay : MonoBehaviour, IDisplay {
+public class StringDisplay : MonoBehaviour, IValueChangeHandler, IDisplay {
 
-    Text _healthText;
-    int _healthValue;
+    Text _display;
+    int _value;
 
     public void DisplayIt(Text target, int value)
     {
@@ -15,14 +15,14 @@ public class HealthDisplay : MonoBehaviour, IDisplay {
 
     public void UpdateValue(int newValue)
     {
-        _healthValue = newValue;
-        DisplayIt(_healthText, _healthValue);
+        _value = newValue;
+        DisplayIt(_display, _value);
     }
 
     // Use this for initialization
     void Start ()
     {
-        _healthText = gameObject.GetComponent<Text>();
+        _display = gameObject.GetComponent<Text>();
     }
 	
 }

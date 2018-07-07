@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnakeHealth : MonoBehaviour, IHealth {
 
-    IDisplay _healthDisplay;
+    IValueChangeHandler _healthDisplay;
     float StartHungerTime = 3;
     float hungerTime = 3;
     int _health = 3;
@@ -23,7 +23,7 @@ public class SnakeHealth : MonoBehaviour, IHealth {
 
     private void Start()
     {
-        _healthDisplay = GameObject.FindGameObjectWithTag("Display").GetComponent<IDisplay>();
+        _healthDisplay = GameObject.FindGameObjectWithTag("Display").GetComponent<IValueChangeHandler>();
         _healthDisplay.UpdateValue(_health);
     }
 
