@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthDisplay : MonoBehaviour {
-    public Text HealthText;
-    IHealth snakeHealth;
-	// Use this for initialization
-	void Start ()
+public class HealthDisplay : MonoBehaviour, IDisplay {
+
+    Text _healthText;
+    int _healthValue;
+
+    public void DisplayIt(Text target, int value)
     {
-        snakeHealth = GameObject.FindGameObjectWithTag("Snake").GetComponent<IHealth>();
-        HealthText = gameObject.GetComponent<Text>();
+        target.text = value.ToString();
+    }
+
+    public void UpdateValue(int newValue)
+    {
+        _healthValue = newValue;
+        DisplayIt(_healthText, _healthValue);
+    }
+
+    // Use this for initialization
+    void Start ()
+    {
+        _healthText = gameObject.GetComponent<Text>();
     }
 	
-	// Update is called once per frame
-	void Update ()
-    {
-        HealthText.text = snakeHealth.GetHealthValue().ToString();               
-    }
 }

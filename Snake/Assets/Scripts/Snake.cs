@@ -10,7 +10,6 @@ public class Snake : MonoBehaviour {
     public float Speed;
     [Range(0, 10)]
     public float BonesDistance;
-    public int Health = 3;
     
     public GameObject TailPrefab;
 

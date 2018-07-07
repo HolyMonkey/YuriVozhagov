@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SnakeHealth : MonoBehaviour, IHealth {
 
+    IDisplay _healthDisplay;
     float StartHungerTime = 3;
     float hungerTime = 3;
     int _health = 3;
@@ -20,6 +21,12 @@ public class SnakeHealth : MonoBehaviour, IHealth {
         }
     }
 
+    private void Start()
+    {
+        _healthDisplay = GameObject.FindGameObjectWithTag("Display").GetComponent<IDisplay>();
+        _healthDisplay.UpdateValue(_health);
+    }
+
     private void Update()
     {
         GetHunger();
@@ -34,6 +41,7 @@ public class SnakeHealth : MonoBehaviour, IHealth {
             {
                 Health = 0;
             }
+            _healthDisplay.UpdateValue(_health);
         }
     }
 
@@ -42,6 +50,7 @@ public class SnakeHealth : MonoBehaviour, IHealth {
         if (value > 0)
         {
             Health += value;
+            _healthDisplay.UpdateValue(_health);
         }
     }
 
@@ -51,8 +60,13 @@ public class SnakeHealth : MonoBehaviour, IHealth {
         if (StartHungerTime <= 0)
         {
             Health -= 1;
+            if (Health >= 0)
+            {
+                _healthDisplay.UpdateValue(_health);
+            }
             StartHungerTime = hungerTime;
             CheckDeath();
+            
         }
     }
 
