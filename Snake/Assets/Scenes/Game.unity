@@ -9196,7 +9196,7 @@ GameObject:
   - component: {fileID: 1253462359}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Display
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9271,7 +9271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba26a58ff0664e46875fb4c7bb2c2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthText: {fileID: 0}
 --- !u!4 &1266441536 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4437459323509006, guid: 0de8a3d472546b04aa775e83b052764e,
@@ -9694,7 +9693,6 @@ MonoBehaviour:
   - {fileID: 1737696793}
   Speed: 0.1
   BonesDistance: 0.5
-  Health: 3
   TailPrefab: {fileID: 1475426811981050, guid: af41bfe86b3f7f54cbbd62ffb523c8a8, type: 2}
   OnEat:
     m_PersistentCalls:
