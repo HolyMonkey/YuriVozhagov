@@ -8,6 +8,6 @@ public class HealingEat : MonoBehaviour, IFoodLogic {
 
     public void Do(Snake snake)
     {
-        snake.gameObject.GetComponent<IHealth>().AddHealth(HealValue);
+        snake.Health.AddHealth(HealValue);
     }
 }

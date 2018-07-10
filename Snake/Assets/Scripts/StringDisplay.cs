@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StringDisplay : MonoBehaviour, IValueChangeHandler, IDisplay {
+public class StringDisplay : MonoBehaviour, IValueChangeHandler {
 
-    Text _display;
-    int _value;
-
-    public void DisplayIt(Text target, int value)
-    {
-        target.text = value.ToString();
-    }
+    private Text _display;
+    private int _value;
 
     public void UpdateValue(int newValue)
     {
@@ -19,8 +14,12 @@ public class StringDisplay : MonoBehaviour, IValueChangeHandler, IDisplay {
         DisplayIt(_display, _value);
     }
 
-    // Use this for initialization
-    void Start ()
+    private void DisplayIt(Text target, int value)
+    {
+        target.text = value.ToString();
+    }
+
+    private void Start ()
     {
         _display = gameObject.GetComponent<Text>();
     }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnakeHealth : MonoBehaviour, IHealth {
-
-    IValueChangeHandler _healthDisplay;
-    float StartHungerTime = 3;
-    float hungerTime = 3;
-    int _health = 3;
+public class SnakeHealth : MonoBehaviour, IHealth, IIntEvent
+{
+    private IValueChangeHandler _handler;
+    private float StartHungerTime = 3;
+    private float hungerTime = 3;
+    private int _health = 3;
+    private int _maxHealth;
 
     public int Health
     {
@@ -23,8 +24,12 @@ public class SnakeHealth : MonoBehaviour, IHealth {
 
     private void Start()
     {
-        _healthDisplay = GameObject.FindGameObjectWithTag("Display").GetComponent<IValueChangeHandler>();
-        _healthDisplay.UpdateValue(_health);
+        _handler.UpdateValue(_health);
+    }
+
+    public void SetHandler(IValueChangeHandler handler)
+    {
+        _handler = handler;
     }
 
     private void Update()
@@ -41,7 +46,11 @@ public class SnakeHealth : MonoBehaviour, IHealth {
             {
                 Health = 0;
             }
-            _healthDisplay.UpdateValue(_health);
+
+            if (_handler != null)
+            {
+                _handler.UpdateValue(_maxHealth / _health);
+            }
         }
     }
 
@@ -50,7 +59,11 @@ public class SnakeHealth : MonoBehaviour, IHealth {
         if (value > 0)
         {
             Health += value;
-            _healthDisplay.UpdateValue(_health);
+
+            if (_handler != null)
+            {
+                _handler.UpdateValue(_maxHealth / _health);
+            }
         }
     }
 
@@ -62,7 +75,10 @@ public class SnakeHealth : MonoBehaviour, IHealth {
             Health -= 1;
             if (Health >= 0)
             {
-                _healthDisplay.UpdateValue(_health);
+                if (_handler != null)
+                {
+                    _handler.UpdateValue(_maxHealth / _health);
+                }
             }
             StartHungerTime = hungerTime;
             CheckDeath();
@@ -83,4 +99,5 @@ public class SnakeHealth : MonoBehaviour, IHealth {
     {
         return Health;
     }
+
 }

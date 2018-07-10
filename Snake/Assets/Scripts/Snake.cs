@@ -4,27 +4,31 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(IHealth))]
 public class Snake : MonoBehaviour {
 
     public List<Transform> Tail;
     public float Speed;
     [Range(0, 10)]
     public float BonesDistance;
-    
+    public IHealth Health { get; private set;  }
+     
     public GameObject TailPrefab;
-
     public UnityEvent OnEat;
-
     private Transform _transform;
 
     private void Start()
     {
         _transform = GetComponent<Transform>();
+        Health = GetComponent<IHealth>();
+        if(Health == null)
+        {
+            Debug.LogError("Snake need IHealth implementation");
+        } 
     }
 
     private void Update()
     {
-        
         MoveSnake(_transform.position + (transform.forward * (Speed)));
 
         float angel = Input.GetAxis("Horizontal") * 4;
